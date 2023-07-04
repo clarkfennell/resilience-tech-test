@@ -33,18 +33,27 @@ _Please complete the following tasks and submit your code using a Git repository
     - data.js
 ```
 
-- [ ] Develop a basic dashboard in the `Dashboard` component that displays a list of items, importing the data from data.js. Use the provided wireframe as a reference for the layout and design.
+- [x] Develop a basic dashboard in the `Dashboard` component that displays a list of items, importing the data from data.js. Use the provided wireframe as a reference for the layout and design.
 
 ###### _Task 2: Reusable (list item) Component_
 
-- [ ] Build and use a reusable component to display the company information -> company name, previous names and sectors.
-- [ ] Using the data imported to the dashboard, pass down the relevant required data for the component.
-- [ ] The coloured blobs visually represent the sector of the company.
-- [ ] Build a tooltip, when a user hovers over the question mark symbol, the black helper box appears and provides more information, when they hover away it disappears.
-- [ ] Sanitise the data, decide how to handle any missing fields, special characters.
+- [x] Build and use a reusable component to display the company information -> company name, previous names and sectors.
+- [x] Using the data imported to the dashboard, pass down the relevant required data for the component.
+- [x] The coloured blobs visually represent the sector of the company.
+- [x] Build a tooltip, when a user hovers over the question mark symbol, the black helper box appears and provides more information, when they hover away it disappears.
+- [x] Sanitise the data, decide how to handle any missing fields, special characters.
 
 ###### _Personal Additions Once Task Are Complete_
 
+- [ ] Add more details section on click
+- [ ] Add a scroll reveal to reusable components inside the dashboard
+- [ ] Add a custom scroll bar
+
 ###### _Notes_
+
+- Used default colour for Sector is missing
+- Checked for data if missing and filled in with default statements in more details section
+- Checked for Previous Names, and looped through. If not Tool Tip does not show
+- Checked for any data first and output a 'no data' message if data is not found
 
 ###### <ins>_If I had more time_</ins>
