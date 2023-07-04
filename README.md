@@ -3,7 +3,7 @@
 ## Setup Instructions
 
 1. Clone this repository
-2. cd into the /dragoonis-tech-test directory
+2. cd into the /resilience-tech-test directory
 3. Type the following command to install the dependencies and run the project
 
 ```
@@ -22,7 +22,7 @@ _Please complete the following tasks and submit your code using a Git repository
 
 ###### _Task 1: Basic Dashboard_
 
-- [ ] Create a simple project using your chosen framework with the following structure:
+- [x] Create a simple project using your chosen framework with the following structure:
 
 ```
 - src
