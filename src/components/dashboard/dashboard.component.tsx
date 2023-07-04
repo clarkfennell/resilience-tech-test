@@ -1,7 +1,7 @@
-import * as S from './dashboard.styles'
-
 import { investments } from '@data/data'
 import { ReusableComponent } from '@components/reusable-component/reusable-component.component'
+
+import * as S from './dashboard.styles'
 
 export const DashBoard = () => {
  return (

@@ -4,12 +4,13 @@ import { H3, ParagraphSmall } from '@theme/typography'
 
 export const ColorWrap = styled.div<{ hoverDetails: boolean; sector?: string }>`
  background-color: ${({ theme }) => theme.colors.colors.transparent};
-color: ${({ theme }) => theme.colors.colors.black}
+ border-radius: 0.25rem;
+ color: ${({ theme }) => theme.colors.colors.black};
  height: auto;
  overflow: hidden;
  padding: 0.25rem;
  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
- width: 100%;
+ width: -webkit-fill-available;
 
  ${({ hoverDetails, sector, theme }) =>
   hoverDetails &&
@@ -36,6 +37,7 @@ export const Container = styled.div`
  align-items: flex-start;
  display: flex;
  flex-direction: column;
+ height: auto;
  justify-content: flex-start;
  padding: 0.5rem 2rem;
  width: -webkit-fill-available;
@@ -50,12 +52,16 @@ export const WrapperTop = styled.div`
  width: -webkit-fill-available;
 `
 
-export const WrapperBottom = styled.div<{ showDetails: boolean }>`
+export const WrapperBottom = styled.div<{ showDetails: boolean; hoverDetails: boolean }>`
  align-items: center;
+ color: ${({ hoverDetails, theme }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.black)};
  display: flex;
  flex-direction: row;
- height: 0;
  justify-content: space-between;
+ min-height: ${({ showDetails }) => (showDetails ? '10rem' : '0')};
+ max-height: ${({ showDetails }) => (showDetails ? '10rem' : '0')};
+ overflow: hidden;
+ transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
  width: -webkit-fill-available;
 `
 
@@ -88,6 +94,7 @@ export const ToolTip = styled.div`
 
 export const ToolTipText = styled.div<{ showToolTip: boolean }>`
  background-color: ${({ theme }) => theme.colors.colors.black};
+ border-radius: 0.25rem;
  color: ${({ theme }) => theme.colors.colors.white};
  left: 2rem;
  opacity: ${({ showToolTip }) => (showToolTip ? '1' : '0')};
@@ -182,3 +189,14 @@ export const Details = styled.button<{ hoverDetails: boolean }>`
  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
  width: 100%;
 `
+
+export const InfoWrapper = styled.div`
+ display: flex;
+ flex-direction: column;
+
+ span {
+  font-weight: 700;
+ }
+`
+
+export const Info = styled.div``

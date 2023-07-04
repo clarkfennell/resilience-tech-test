@@ -40,7 +40,7 @@ export const Content = styled.div`
  overflow-y: scroll;
  width: -webkit-fill-available;
 `
-export const Investment = styled.div`
+export const Investment = styled.div<{ showDetails?: boolean }>`
  align-items: flex-start;
  background-color: ${({ theme }) => theme.colors.colors.white};
  border-radius: 0.25rem;
@@ -48,9 +48,7 @@ export const Investment = styled.div`
  flex-direction: column;
  justify-content: flex-start;
  margin: 0.5rem 0.5rem 0;
- min-height: 4rem;
- overflow-x: hidden;
- overflow-y: visible;
+ height: auto;
  width: -webkit-fill-available;
 
  &:last-of-type {

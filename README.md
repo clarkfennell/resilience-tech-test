@@ -45,9 +45,9 @@ _Please complete the following tasks and submit your code using a Git repository
 
 ###### _Personal Additions Once Task Are Complete_
 
-- [ ] Add more details section on click
-- [ ] Add a scroll reveal to reusable components inside the dashboard
+- [x] Add more details section on click
 - [ ] Add a custom scroll bar
+- [ ] Add a scroll reveal to reusable components inside the dashboard
 
 ###### _Notes_
 
