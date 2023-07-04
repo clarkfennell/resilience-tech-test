@@ -11,12 +11,11 @@ export const Container = styled.div`
  height: auto;
  justify-content: center;
  margin: 0 1rem 1rem;
- overflow-y: scroll;
  scrollbar-color: ${({ theme }) => theme.colors.colors.light_grey} ${({ theme }) => theme.colors.colors.dark_grey};
  scrollbar-width: thin;
 
  ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.25rem;
  }
 
  ::-webkit-scrollbar-track {
@@ -24,7 +23,8 @@ export const Container = styled.div`
  }
 
  ::-webkit-scrollbar-thumb {
-  background-color: ${({ theme }) => theme.colors.colors.green};
+  background-color: ${({ theme }) => theme.colors.colors.blue};
+  box-shadow: 0 -100vh 0 100vh ${({ theme }) => theme.colors.colors.blue};
  }
 `
 export const Header = styled.div`
@@ -55,7 +55,7 @@ export const Content = styled.div`
  overflow-y: scroll;
  width: -webkit-fill-available;
 `
-export const Investment = styled.div<{ showDetails?: boolean }>`
+export const Investment = styled.div`
  align-items: flex-start;
  background-color: ${({ theme }) => theme.colors.colors.white};
  border-radius: 0.25rem;
