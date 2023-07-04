@@ -36,19 +36,23 @@ export const Content = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: flex-start;
- padding: 0.5rem;
  width: -webkit-fill-available;
 `
 export const Investment = styled.div`
- display: flex;
- flex-direction: column;
- margin: 0.5rem;
- justify-content: flex-start;
  align-items: flex-start;
  background-color: ${({ theme }) => theme.colors.colors.white};
  border-radius: 0.25rem;
+ cursor: pointer;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ margin: 0.5rem 0.5rem 0;
  padding: 0.5rem;
  width: -webkit-fill-available;
+
+ &:last-of-type {
+  margin-bottom: 0.5rem;
+ }
 `
 
 export const Info = styled.div``
