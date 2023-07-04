@@ -8,7 +8,11 @@ export const GlobalStyles = createGlobalStyle`
         color: #FFF;
         font-family: 'Century Gothic', sans-serif;
         font-size: 16px;
-        margin: 0;
+        margin: 1rem;
         padding: 0;
+    }
+
+    h1, h2, h3, p {
+        margin: 0;
     }
 `
