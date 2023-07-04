@@ -5,4 +5,13 @@ export const colors = {
  green: '#00D08E',
  blue: '#00BBDD',
  red: '#DC1818',
+ light_grey: '#F6F6F6',
+ dark_grey: '#E2E2E2',
+ healthcare_orange: '#F09A34',
+ it_blue: '#6697C9',
+ agriculture_yellow: '#F7E166',
+ environment_green: '#00D08E',
+ financials_purple: '#8A7EE2',
+ aerospace_charcoal: '#383F51',
+ consumer_pink: '#FF6F61',
 }

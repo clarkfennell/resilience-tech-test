@@ -1,4 +1,5 @@
 import StyledComponentsRegistry from '@/lib/registry'
+import { ThemeProvider } from '@/lib/theme-provider'
 import { GlobalStyles } from '@theme/global'
 
 export const metadata = {
@@ -8,13 +9,13 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
  return (
-  <>
+  <ThemeProvider>
    <GlobalStyles />
    <html lang="en">
     <body>
      <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
     </body>
    </html>
-  </>
+  </ThemeProvider>
  )
 }

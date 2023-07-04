@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const heading1 = css`
- font-family: 'Lufga Bold';
+ font-family: 'Lufga Bold', sans-serif;
  font-size: 3rem;
  line-height: 3rem;
  margin: 0;
@@ -9,7 +9,7 @@ export const heading1 = css`
 `
 
 export const heading2 = css`
- font-family: 'Lufga';
+ font-family: 'Lufga, sans-serif';
  font-size: 2.5rem;
  line-height: 2.5rem;
  margin: 0;
@@ -17,7 +17,7 @@ export const heading2 = css`
 `
 
 export const heading3 = css`
- font-family: 'Lufga Thin';
+ font-family: 'Lufga Thin', sans-serif;
  font-size: 2rem;
  line-height: 2rem;
  margin: 0;
@@ -25,7 +25,7 @@ export const heading3 = css`
 `
 
 export const paragraphLarge = css`
- font-family: 'Century Gothic';
+ font-family: 'Century Gothic', sans-serif;
  font-size: 1.5rem;
  line-height: 1.5rem;
  margin: 0;
@@ -33,7 +33,7 @@ export const paragraphLarge = css`
 `
 
 export const paragraph = css`
- font-family: 'Century Gothic';
+ font-family: 'Century Gothic', sans-serif;
  font-size: 1rem;
  line-height: 1rem;
  margin: 0;
@@ -41,7 +41,7 @@ export const paragraph = css`
 `
 
 export const paragraphSmall = css`
- font-family: 'Century Gothic';
+ font-family: 'Century Gothic', sans-serif;
  font-size: 0.75rem;
  line-height: 0.75rem;
  margin: 0;
