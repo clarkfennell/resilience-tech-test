@@ -11,6 +11,21 @@ export const Container = styled.div`
  height: auto;
  justify-content: center;
  margin: 0 1rem 1rem;
+ overflow-y: scroll;
+ scrollbar-color: ${({ theme }) => theme.colors.colors.light_grey} ${({ theme }) => theme.colors.colors.dark_grey};
+ scrollbar-width: thin;
+
+ ::-webkit-scrollbar {
+  width: 0.5rem;
+ }
+
+ ::-webkit-scrollbar-track {
+  background-color: ${({ theme }) => theme.colors.colors.aerospace_charcoal};
+ }
+
+ ::-webkit-scrollbar-thumb {
+  background-color: ${({ theme }) => theme.colors.colors.green};
+ }
 `
 export const Header = styled.div`
  align-items: center;
