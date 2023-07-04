@@ -54,6 +54,11 @@ export const Content = styled.div`
  max-height: 80vh;
  overflow-y: scroll;
  width: -webkit-fill-available;
+
+ .fade-wrapper {
+  pointer-events: all;
+  width: 100%;
+ }
 `
 export const Investment = styled.div`
  align-items: flex-start;

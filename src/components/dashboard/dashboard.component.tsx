@@ -1,3 +1,6 @@
+'use client'
+import { Fade } from 'react-awesome-reveal'
+
 import { investments } from '@data/data'
 import { ReusableComponent } from '@components/reusable-component/reusable-component.component'
 
@@ -12,9 +15,11 @@ export const DashBoard = () => {
    <S.Content>
     {investments ? (
      investments.map((investment) => (
-      <S.Investment key={investment.id}>
-       <ReusableComponent investment={investment && investment} />
-      </S.Investment>
+      <Fade cascade key={investment.id} className="fade-wrapper">
+       <S.Investment>
+        <ReusableComponent investment={investment && investment} />
+       </S.Investment>
+      </Fade>
      ))
     ) : (
      <S.Investment>
