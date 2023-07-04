@@ -10,10 +10,7 @@ export const Container = styled.div`
  flex-direction: column;
  height: auto;
  justify-content: center;
- margin: 1rem auto;
- max-height: 75vw;
- max-width: 85vw;
- width: 100%;
+ margin: 0 1rem 1rem;
 `
 export const Header = styled.div`
  align-items: center;
@@ -39,5 +36,19 @@ export const Content = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: flex-start;
- padding: 1rem;
+ padding: 0.5rem;
+ width: -webkit-fill-available;
 `
+export const Investment = styled.div`
+ display: flex;
+ flex-direction: column;
+ margin: 0.5rem;
+ justify-content: flex-start;
+ align-items: flex-start;
+ background-color: ${({ theme }) => theme.colors.colors.white};
+ border-radius: 0.25rem;
+ padding: 0.5rem;
+ width: -webkit-fill-available;
+`
+
+export const Info = styled.div``
