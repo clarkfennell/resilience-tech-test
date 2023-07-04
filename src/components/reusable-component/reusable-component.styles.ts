@@ -1,0 +1,184 @@
+'use client'
+import styled, { DefaultTheme, css } from 'styled-components'
+import { H3, ParagraphSmall } from '@theme/typography'
+
+export const ColorWrap = styled.div<{ hoverDetails: boolean; sector?: string }>`
+ background-color: ${({ theme }) => theme.colors.colors.transparent};
+color: ${({ theme }) => theme.colors.colors.black}
+ height: auto;
+ overflow: hidden;
+ padding: 0.25rem;
+ transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+ width: 100%;
+
+ ${({ hoverDetails, sector, theme }) =>
+  hoverDetails &&
+  sector &&
+  css`
+   background-color: ${handleColourType(sector, theme)};
+   ${TitleWrapper} {
+    color: ${theme.colors.colors.white};
+   }
+  `}
+
+ ${({ hoverDetails, sector, theme }) =>
+  hoverDetails &&
+  !sector &&
+  css`
+   background-color: ${theme.colors.colors.green};
+   ${TitleWrapper} {
+    color: ${theme.colors.colors.white};
+   }
+  `}
+`
+
+export const Container = styled.div`
+ align-items: flex-start;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ padding: 0.5rem 2rem;
+ width: -webkit-fill-available;
+`
+
+export const WrapperTop = styled.div`
+ align-items: center;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ position: relative;
+ width: -webkit-fill-available;
+`
+
+export const WrapperBottom = styled.div<{ showDetails: boolean }>`
+ align-items: center;
+ display: flex;
+ flex-direction: row;
+ height: 0;
+ justify-content: space-between;
+ width: -webkit-fill-available;
+`
+
+export const TitleWrapper = styled.div``
+
+export const TitleTop = styled.div`
+ align-items: center;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ margin-bottom: 0.25rem;
+`
+
+export const Title = styled(H3)`
+ font-size: 1.25rem;
+ letter-spacing: -0.5px;
+ line-height: 1.25rem;
+`
+
+export const ToolTip = styled.div`
+ height: 1rem;
+ margin-left: 0.5rem;
+ position: relative;
+ width: 1rem;
+
+ img {
+  cursor: pointer;
+ }
+`
+
+export const ToolTipText = styled.div<{ showToolTip: boolean }>`
+ background-color: ${({ theme }) => theme.colors.colors.black};
+ color: ${({ theme }) => theme.colors.colors.white};
+ left: 2rem;
+ opacity: ${({ showToolTip }) => (showToolTip ? '1' : '0')};
+ padding: 1rem;
+ position: absolute;
+ transform: translateY(-50%);
+ transition: opacity 0.5s ease-in-out;
+ top: 90%;
+
+ &:before {
+  border-bottom: 0.5rem solid ${({ theme }) => theme.colors.colors.transparent};
+  border-right: 0.5rem solid ${({ theme }) => theme.colors.colors.black};
+  border-top: 0.5rem solid ${({ theme }) => theme.colors.colors.transparent};
+  content: '';
+  height: 0;
+  position: absolute;
+  right: 100%;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 0;
+ }
+`
+
+export const ToolTipTextGroup = styled.ul`
+ align-items: center;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ white-space: nowrap;
+`
+
+export const PreviousName = styled.li`
+ padding: 0 0.25rem;
+ white-space: nowrap;
+`
+
+export const Sector = styled(ParagraphSmall)``
+
+const handleColourType = (sector: string, theme: DefaultTheme) => {
+ switch (sector) {
+  case 'Agriculture':
+   return theme.colors.colors.agriculture_yellow
+  case 'Consumer Discretionary':
+   return theme.colors.colors.consumer_pink
+  case 'Environment & Renewables':
+   return theme.colors.colors.environment_green
+  case 'Financials':
+   return theme.colors.colors.financials_purple
+  case 'Healthcare':
+   return theme.colors.colors.healthcare_orange
+  case 'Information Technology':
+   return theme.colors.colors.it_blue
+  case '':
+   return theme.colors.colors.green
+  case typeof undefined:
+   return theme.colors.colors.green
+  case typeof null:
+   return theme.colors.colors.green
+  default:
+   return theme.colors.colors.green
+ }
+}
+
+export const SectorColor = styled.div<{ sector?: string }>`
+ ${({ sector, theme }) =>
+  sector
+   ? `background-color: ` + handleColourType(sector, theme) + `;`
+   : `background-color: ${theme.colors.colors.green};`}
+
+ border-radius: 50%;
+ height: 2.5rem;
+ right: calc(100% + 1rem);
+ position: absolute;
+ width: 2.5rem;
+`
+
+export const Details = styled.button<{ hoverDetails: boolean }>`
+ align-items: center;
+ background-color: ${({ theme }) => theme.colors.colors.transparent};
+ border-radius: 2rem;
+ border: 0.025rem solid
+  ${({ theme, hoverDetails }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.red)};
+ color: ${({ theme, hoverDetails }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.red)};
+ cursor: pointer;
+ display: flex;
+ font-size: 1.25rem;
+ height: auto;
+ justify-content: center;
+ letter-spacing: -0.5px;
+ max-width: 5rem;
+ padding: 0.5rem 5rem;
+ transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+ width: 100%;
+`

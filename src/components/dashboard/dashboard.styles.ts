@@ -36,18 +36,21 @@ export const Content = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: flex-start;
+ max-height: 80vh;
+ overflow-y: scroll;
  width: -webkit-fill-available;
 `
 export const Investment = styled.div`
  align-items: flex-start;
  background-color: ${({ theme }) => theme.colors.colors.white};
  border-radius: 0.25rem;
- cursor: pointer;
  display: flex;
  flex-direction: column;
  justify-content: flex-start;
  margin: 0.5rem 0.5rem 0;
- padding: 0.5rem;
+ min-height: 4rem;
+ overflow-x: hidden;
+ overflow-y: visible;
  width: -webkit-fill-available;
 
  &:last-of-type {
