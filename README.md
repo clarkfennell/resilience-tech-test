@@ -47,7 +47,7 @@ _Please complete the following tasks and submit your code using a Git repository
 
 - [x] Add more details section on click
 - [x] Add a custom scroll bar
-- [ ] Add a scroll reveal to reusable components inside the dashboard
+- [x] Add a scroll reveal to reusable components inside the dashboard
 
 ###### _Notes_
 
@@ -57,3 +57,7 @@ _Please complete the following tasks and submit your code using a Git repository
 - Checked for any data first and output a 'no data' message if data is not found
 
 ###### <ins>_If I had more time_</ins>
+
+- I would add Jest tests to confirm every component does what it needs to
+- I would review any console log errors and try to solve them.
+- I would look at the transitions and animations, and see if they can be improved
