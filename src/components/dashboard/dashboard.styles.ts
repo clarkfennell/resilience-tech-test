@@ -10,9 +10,13 @@ export const Container = styled.div`
  flex-direction: column;
  height: auto;
  justify-content: center;
- margin: 0 1rem 1rem;
+ margin: 0 0 1rem;
  scrollbar-color: ${({ theme }) => theme.colors.colors.light_grey} ${({ theme }) => theme.colors.colors.dark_grey};
  scrollbar-width: thin;
+
+ @media (min-width: 768px) {
+  margin: 0 1rem 1rem;
+ }
 
  ::-webkit-scrollbar {
   width: 0.25rem;

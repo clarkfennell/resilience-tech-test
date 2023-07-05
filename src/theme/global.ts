@@ -8,7 +8,9 @@ export const GlobalStyles = createGlobalStyle`
         color: #FFF;
         font-family: 'Century Gothic', sans-serif;
         font-size: 16px;
-        margin: 1rem;
+        margin: 0.5rem;
+        max-height: calc(100vh - 5rem);
+        overflow: hidden;
         padding: 0;
     }
 

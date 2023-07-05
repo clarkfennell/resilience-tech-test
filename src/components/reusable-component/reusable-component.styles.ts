@@ -12,25 +12,27 @@ export const ColorWrap = styled.div<{ hoverDetails: boolean; sector?: string }>`
  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
  width: -webkit-fill-available;
 
- ${({ hoverDetails, sector, theme }) =>
-  hoverDetails &&
-  sector &&
-  css`
-   background-color: ${handleColourType(sector, theme)};
-   ${TitleWrapper} {
-    color: ${theme.colors.colors.white};
-   }
-  `}
+ @media (min-width: 768px) {
+  ${({ hoverDetails, sector, theme }) =>
+   hoverDetails &&
+   sector &&
+   css`
+    background-color: ${handleColourType(sector, theme)};
+    ${TitleWrapper} {
+     color: ${theme.colors.colors.white};
+    }
+   `}
 
- ${({ hoverDetails, sector, theme }) =>
-  hoverDetails &&
-  !sector &&
-  css`
-   background-color: ${theme.colors.colors.green};
-   ${TitleWrapper} {
-    color: ${theme.colors.colors.white};
-   }
-  `}
+  ${({ hoverDetails, sector, theme }) =>
+   hoverDetails &&
+   !sector &&
+   css`
+    background-color: ${theme.colors.colors.green};
+    ${TitleWrapper} {
+     color: ${theme.colors.colors.white};
+    }
+   `}
+ }
 `
 
 export const Container = styled.div`
@@ -39,30 +41,48 @@ export const Container = styled.div`
  flex-direction: column;
  height: auto;
  justify-content: flex-start;
- padding: 0.5rem 2rem;
+ padding: 0.5rem 0.5rem 0;
+ margin-bottom: -0.5rem;
  width: -webkit-fill-available;
+
+ @media (min-width: 768px) {
+  margin-bottom: 0;
+  padding: 0.5rem 2rem;
+ }
 `
 
 export const WrapperTop = styled.div`
- align-items: center;
+ align-items: flex-start;
  display: flex;
- flex-direction: row;
+ flex-direction: column;
  justify-content: space-between;
  position: relative;
  width: -webkit-fill-available;
+
+ @media (min-width: 768px) {
+  align-items: center;
+  flex-direction: row;
+ }
 `
 
 export const WrapperBottom = styled.div<{ showDetails: boolean; hoverDetails: boolean }>`
  align-items: center;
- color: ${({ hoverDetails, theme }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.black)};
+ color: ${({ theme }) => theme.colors.colors.black};
  display: flex;
  flex-direction: row;
  justify-content: space-between;
+ margin-bottom: 0.5rem;
  min-height: ${({ showDetails }) => (showDetails ? '10rem' : '0')};
- max-height: ${({ showDetails }) => (showDetails ? '10rem' : '0')};
+ max-height: ${({ showDetails }) => (showDetails ? '20rem' : '0')};
  overflow: hidden;
  transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
  width: -webkit-fill-available;
+
+ @media (min-width: 768px) {
+  margin-bottom: 0;
+  max-height: ${({ showDetails }) => (showDetails ? '10rem' : '0')};
+  color: ${({ hoverDetails, theme }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.black)};
+ }
 `
 
 export const TitleWrapper = styled.div``
@@ -82,6 +102,7 @@ export const Title = styled(H3)`
 `
 
 export const ToolTip = styled.div`
+ display: none;
  height: 1rem;
  margin-left: 0.5rem;
  position: relative;
@@ -89,6 +110,10 @@ export const ToolTip = styled.div`
 
  img {
   cursor: pointer;
+ }
+
+ @media (min-width: 768px) {
+  display: flex;
  }
 `
 
@@ -165,29 +190,44 @@ export const SectorColor = styled.div<{ sector?: string }>`
    : `background-color: ${theme.colors.colors.green};`}
 
  border-radius: 50%;
- height: 2.5rem;
- right: calc(100% + 1rem);
+ height: 6rem;
+ left: calc(100% - 1.5rem);
  position: absolute;
- width: 2.5rem;
+ width: 6rem;
+
+ @media (min-width: 768px) {
+  height: 2.5rem;
+  left: unset;
+  right: calc(100% + 1rem);
+  width: 2.5rem;
+ }
 `
 
 export const Details = styled.button<{ hoverDetails: boolean }>`
  align-items: center;
  background-color: ${({ theme }) => theme.colors.colors.transparent};
  border-radius: 2rem;
- border: 0.025rem solid
-  ${({ theme, hoverDetails }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.red)};
- color: ${({ theme, hoverDetails }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.red)};
+ border: 0.025rem solid ${({ theme }) => theme.colors.colors.red};
+ color: ${({ theme }) => theme.colors.colors.red};
  cursor: pointer;
  display: flex;
  font-size: 1.25rem;
  height: auto;
  justify-content: center;
  letter-spacing: -0.5px;
+ margin: 1rem 0;
  max-width: 5rem;
- padding: 0.5rem 5rem;
+ padding: 0.5rem 4rem;
  transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
  width: 100%;
+
+ @media (min-width: 768px) {
+  border: 0.025rem solid
+   ${({ theme, hoverDetails }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.red)};
+  color: ${({ theme, hoverDetails }) => (hoverDetails ? theme.colors.colors.white : theme.colors.colors.red)};
+  margin: 0;
+  padding: 0.5rem 5rem;
+ }
 `
 
 export const InfoWrapper = styled.div`
