@@ -61,3 +61,39 @@ _Please complete the following tasks and submit your code using a Git repository
 
 - I would review any console log errors and try to solve them.
 - I would look at the transitions and animations, and see if they can be improved
+- I would have added more tests to check for mounting and transitions
+
+###### _Full Design Implementation Screenshots_
+
+- ###### Desktop ######
+    - No Hover, Details Closed
+        ![Desktop](./public/Desktop.png)
+
+    - Hover, Details Closed
+        ![Desktop hover](./public/Desktop_hover.png)
+
+    - No Hover, Details Open
+        ![Desktop details open](./public/Desktop_details_open.png)
+
+    - Hover, Details Open
+        ![Desktop details open](./public/Desktop_details_open_hover.png)
+
+- ###### Tablet ######
+    - No Hover, Details Closed
+        ![Tablet](./public/Tablet_details_closed.png)
+
+    - Hover, Details Closed
+        ![Tablet hover](./public/Tablet_details_closed_hover.png)
+
+    - No Hover, Details Open
+        ![Tablet details open](./public/Tablet_details_open.png)
+
+    - Hover, Details Open
+        ![Tablet details open](./public/Tablet_details_open_hover.png)
+
+- ###### Mobile ######
+    - Details Closed
+        ![Mobile](./public/Mobile_details_closed.png)
+
+    - Details Opened
+        ![Mobile](./public/Mobile_details_open.png.png)
