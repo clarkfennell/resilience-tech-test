@@ -13,7 +13,7 @@ export const DashBoard = () => {
     <S.Title>Dashboard</S.Title>
    </S.Header>
    <S.Content>
-    {investments && investments !== [] ? (
+    {investments ? (
      investments.map((investment) => (
       <Fade cascade key={investment.id} className="fade-wrapper" data-testid="investments">
        <S.Investment>
