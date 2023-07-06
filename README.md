@@ -96,4 +96,4 @@ _Please complete the following tasks and submit your code using a Git repository
         ![Mobile](./public/Mobile_details_closed.png)
 
     - Details Opened
-        ![Mobile](./public/Mobile_details_open.png.png)
+        ![Mobile](./public/Mobile_details_open.png)
