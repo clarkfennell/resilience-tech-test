@@ -8,21 +8,21 @@ import * as S from './dashboard.styles'
 
 export const DashBoard = () => {
  return (
-  <S.Container>
+  <S.Container data-testid="dashboard">
    <S.Header>
     <S.Title>Dashboard</S.Title>
    </S.Header>
    <S.Content>
-    {investments ? (
+    {investments && investments !== [] ? (
      investments.map((investment) => (
-      <Fade cascade key={investment.id} className="fade-wrapper">
+      <Fade cascade key={investment.id} className="fade-wrapper" data-testid="investments">
        <S.Investment>
         <ReusableComponent investment={investment && investment} />
        </S.Investment>
       </Fade>
      ))
     ) : (
-     <S.Investment>
+     <S.Investment data-testid="noInvestments">
       <S.Info>No investments found</S.Info>
      </S.Investment>
     )}

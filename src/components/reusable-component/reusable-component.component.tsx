@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import * as S from './reusable-component.styles'
 
-type ReusableComponentTypes = {
+export type ReusableComponentTypes = {
  investment: {
   id?: number
   name?: string
@@ -27,7 +27,7 @@ export const ReusableComponent = ({ investment }: ReusableComponentTypes) => {
  const [showDetails, setShowDetails] = useState(false)
  const [hoverDetails, setHoverDetails] = useState(false)
  return (
-  <S.ColorWrap hoverDetails={hoverDetails} sector={investment.sector}>
+  <S.ColorWrap hoverDetails={hoverDetails} sector={investment.sector} data-testid="reusable-component">
    <S.Container>
     <S.WrapperTop>
      <S.SectorColor sector={investment.sector} />

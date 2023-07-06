@@ -11,6 +11,7 @@ export const Container = styled.div`
  height: auto;
  justify-content: center;
  margin: 0 0 1rem;
+ max-height: calc(100vh - 5rem);
  scrollbar-color: ${({ theme }) => theme.colors.colors.light_grey} ${({ theme }) => theme.colors.colors.dark_grey};
  scrollbar-width: thin;
 

@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Century Gothic', sans-serif;
         font-size: 16px;
         margin: 0.5rem;
-        max-height: calc(100vh - 5rem);
+        max-height: calc(100vh - 2rem);
         overflow: hidden;
         padding: 0;
     }

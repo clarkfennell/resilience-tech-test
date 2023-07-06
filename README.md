@@ -55,9 +55,9 @@ _Please complete the following tasks and submit your code using a Git repository
 - Checked for data if missing and filled in with default statements in more details section
 - Checked for Previous Names, and looped through. If not Tool Tip does not show
 - Checked for any data first and output a 'no data' message if data is not found
+- Added responsive mobile designs to fit both web and mobile needs
 
 ###### <ins>_If I had more time_</ins>
 
-- I would add Jest tests to confirm every component does what it needs to
 - I would review any console log errors and try to solve them.
 - I would look at the transitions and animations, and see if they can be improved
