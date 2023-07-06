@@ -67,33 +67,43 @@ _Please complete the following tasks and submit your code using a Git repository
 
 - ###### Desktop ######
     - No Hover, Details Closed
-        ![Desktop](./public/Desktop.png)
+
+    ![Desktop](./public/Desktop.png)
 
     - Hover, Details Closed
-        ![Desktop hover](./public/Desktop_hover.png)
+
+    ![Desktop hover](./public/Desktop_hover.png)
 
     - No Hover, Details Open
-        ![Desktop details open](./public/Desktop_details_open.png)
+
+    ![Desktop details open](./public/Desktop_details_open.png)
 
     - Hover, Details Open
-        ![Desktop details open](./public/Desktop_details_open_hover.png)
+
+    ![Desktop details open](./public/Desktop_details_open_hover.png)
 
 - ###### Tablet ######
     - No Hover, Details Closed
-        ![Tablet](./public/Tablet_details_closed.png)
+
+    ![Tablet](./public/Tablet_details_closed.png)
 
     - Hover, Details Closed
-        ![Tablet hover](./public/Tablet_details_closed_hover.png)
+
+    ![Tablet hover](./public/Tablet_details_closed_hover.png)
 
     - No Hover, Details Open
-        ![Tablet details open](./public/Tablet_details_open.png)
+
+    ![Tablet details open](./public/Tablet_details_open.png)
 
     - Hover, Details Open
-        ![Tablet details open](./public/Tablet_details_open_hover.png)
+
+    ![Tablet details open](./public/Tablet_details_open_hover.png)
 
 - ###### Mobile ######
     - Details Closed
-        ![Mobile](./public/Mobile_details_closed.png)
+
+    ![Mobile](./public/Mobile_details_closed.png)
 
     - Details Opened
-        ![Mobile](./public/Mobile_details_open.png)
+
+    ![Mobile](./public/Mobile_details_open.png)
