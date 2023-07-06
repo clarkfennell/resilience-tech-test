@@ -33,10 +33,10 @@ export const ReusableComponent = ({ investment }: ReusableComponentTypes) => {
      <S.SectorColor sector={investment.sector} />
      <S.TitleWrapper>
       <S.TitleTop>
-       <S.Title>{investment.name}</S.Title>
+       {investment.name && <S.Title data-testid="name">{investment.name}</S.Title>}
        {investment.previousNames && (
         <>
-         <S.ToolTip>
+         <S.ToolTip data-testid="tooltip">
           <Image
            src={'/information.png'}
            alt="Previous Names"
@@ -60,7 +60,7 @@ export const ReusableComponent = ({ investment }: ReusableComponentTypes) => {
         </>
        )}
       </S.TitleTop>
-      {investment.sector && <S.Sector>{investment.sector}</S.Sector>}
+      {investment.sector && <S.Sector data-testid="sector">{investment.sector}</S.Sector>}
      </S.TitleWrapper>
      <S.Details
       onClick={() => setShowDetails(!showDetails)}
@@ -73,37 +73,37 @@ export const ReusableComponent = ({ investment }: ReusableComponentTypes) => {
     <S.WrapperBottom showDetails={showDetails} hoverDetails={hoverDetails}>
      <S.InfoWrapper>
       {investment.description && (
-       <S.Info>
+       <S.Info data-testid="description">
         <span>Description:</span> {investment.description}
        </S.Info>
       )}
       {investment.headquarters && (
-       <S.Info>
+       <S.Info data-testid="headquarters">
         <span>Location:</span> {investment.headquarters}
        </S.Info>
       )}
       {investment.foundedYear && (
-       <S.Info>
+       <S.Info data-testid="foundedYear">
         <span>Founded in:</span> {investment.foundedYear}
        </S.Info>
       )}
       {investment.revenue && (
-       <S.Info>
+       <S.Info data-testid="revenue">
         <span>Revenue:</span> {investment.revenue}
        </S.Info>
       )}
       {investment.valuation && (
-       <S.Info>
+       <S.Info data-testid="valuation">
         <span>Valuation:</span> {investment.valuation}
        </S.Info>
       )}
       {investment.investmentValue && (
-       <S.Info>
+       <S.Info data-testid="investmentValue">
         <span>Investment Value:</span> {investment.investmentValue}
        </S.Info>
       )}
       {investment.status && (
-       <S.Info>
+       <S.Info data-testid="status">
         <span>Status:</span> {investment.status}
        </S.Info>
       )}

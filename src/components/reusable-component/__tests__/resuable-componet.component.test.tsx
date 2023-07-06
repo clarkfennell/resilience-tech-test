@@ -9,33 +9,241 @@ describe('Dashboard: Component', () => {
   jest.resetModules()
  })
 
- const investment = {
-  investment: {
-   id: 1,
-   name: 'Acme Corp',
-   previousNames: ['Acme Inc.', 'Acme Limited'],
-   description: 'Manufacturing company specializing in explosive devices',
-   foundedYear: 1960,
-   headquarters: 'Los Angeles, CA',
-   revenue: '$500M',
-   valuation: '$1B',
-   investmentValue: 2.5,
-   status: 'Active',
-   sector: 'Consumer Discretionary',
-   createdDate: '2022-01-01',
-   updatedDate: '2022-01-05',
-  },
- }
-
- const Component = () => (
+ const Component = (props: ReusableComponentTypes) => (
   <ThemeProvider theme={defaultThemeConfig}>
-   <ReusableComponent {...investment} />
+   <ReusableComponent {...props} />
   </ThemeProvider>
  )
 
  it('should render with all the data', () => {
-  render(<Component />)
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
 
   expect(screen.getByTestId('reusable-component')).toBeDefined()
+ })
+
+ it('should not render the name component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('name')).toBeNull()
+ })
+
+ it('should not render previousNames component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('previousName')).toBeNull()
+ })
+
+ it('should not render description component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('description')).toBeNull()
+ })
+
+ it('should not render foundedYear component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('foundedYear')).toBeNull()
+ })
+
+ it('should not render headquarters component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('headquarters')).toBeNull()
+ })
+
+ it('should not render revenue component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('revenue')).toBeNull()
+ })
+
+ it('should not render valuation component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   investmentValue: 1,
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('valuation')).toBeNull()
+ })
+
+ it('should not render investmentValue component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   status: 'test',
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('investmentValue')).toBeNull()
+ })
+
+ it('should not render status component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   sector: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('status')).toBeNull()
+ })
+
+ it('should not render sector component when it is not defined', () => {
+  const investment = {
+   id: 1,
+   name: 'test',
+   previousNames: ['test1', 'test2'],
+   description: 'test',
+   foundedYear: 2021,
+   headquarters: 'test',
+   revenue: 'test',
+   valuation: 'test',
+   investmentValue: 1,
+   status: 'test',
+   createdDate: 'test',
+   updatedDate: 'test',
+  }
+
+  render(<Component investment={investment} />)
+
+  expect(screen.queryByTestId('sector')).toBeNull()
  })
 })
