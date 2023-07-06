@@ -15,7 +15,7 @@ export const DashBoard = ({ investments }: DashboardTypes) => {
     <S.Title>Dashboard</S.Title>
    </S.Header>
    <S.Content>
-    {investments && investments !== [] && investments !== null ? (
+    {investments ? (
      investments.map((investment) => (
       <Fade cascade key={investment.id} className="fade-wrapper">
        <S.Investment data-testid="investments">
